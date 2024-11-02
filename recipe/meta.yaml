@@ -1,5 +1,5 @@
 {% set name = "gospel" %}
-{% set version = "1.14.0" %}
+{% set version = "1.15.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://github.com/kortschak/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: b807c55c2901c5dc517c126d4b67b3567dd1b3cc7bca22007bf4dc11eafbef87
+  sha256: 7182847bc3436923048a50d55eba663d677d06e1901b74f2272db80680b36814
 
 build:
   number: 0
-  skip: True  # [win]
+  skip: true  # [win]
 
 requirements:
   build:
