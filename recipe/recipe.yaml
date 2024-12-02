@@ -1,23 +1,23 @@
-{% set name = "gospel" %}
-{% set version = "1.15.0" %}
+context:
+  version: 1.15.0
 
 package:
-  name: {{ name|lower }}
-  version: {{ version }}
+  name: gospel
+  version: ${{ version }}
 
 source:
-  url: https://github.com/kortschak/{{ name }}/archive/v{{ version }}.tar.gz
+  url: https://github.com/kortschak/gospel/archive/v${{ version }}.tar.gz
   sha256: 7182847bc3436923048a50d55eba663d677d06e1901b74f2272db80680b36814
 
 build:
   number: 0
-  skip: true  # [win]
+  skip: win
 
 requirements:
   build:
-    - {{ compiler('c') }}
-    - {{ compiler('go-cgo') }}
-    - {{ stdlib('c') }}
+    - ${{ compiler('c') }}
+    - ${{ compiler('go-cgo') }}
+    - ${{ stdlib('c') }}
     - go-licenses
     - pkg-config
   host:
@@ -25,18 +25,17 @@ requirements:
   run:
     - hunspell
 
-test:
-  commands:
-    - {{ name }} --help
+tests:
+  - script:
+      - gospel --help
 
 about:
-  home: https://github.com/kortschak/{{ name }}
   license: BSD-3-Clause
   license_file:
     - LICENSE
     - license-files/
   summary: misspelled word linter for Go comments, string literals and embedded files
-  dev_url: https://github.com/kortschak/{{ name }}
+  homepage: https://github.com/kortschak/gospel repository: https://github.com/kortschak/gospel
 
 extra:
   recipe-maintainers:
