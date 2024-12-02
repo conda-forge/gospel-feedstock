@@ -35,7 +35,8 @@ about:
     - LICENSE
     - license-files/
   summary: misspelled word linter for Go comments, string literals and embedded files
-  homepage: https://github.com/kortschak/gospel repository: https://github.com/kortschak/gospel
+  homepage: https://github.com/kortschak/gospel
+  repository: https://github.com/kortschak/gospel
 
 extra:
   recipe-maintainers:
