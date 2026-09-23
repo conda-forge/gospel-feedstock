@@ -1,5 +1,5 @@
 context:
-  version: 1.15.0
+  version: "1.16.0"
 
 package:
   name: gospel
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://github.com/kortschak/gospel/archive/v${{ version }}.tar.gz
-  sha256: 7182847bc3436923048a50d55eba663d677d06e1901b74f2272db80680b36814
+  sha256: d746162a6f2924147270599610a02433ac033a66882bfeac9639a43e3e7700f1
 
 build:
-  number: 1
+  number: 0
   skip: win
 
 requirements:
